@@ -19,6 +19,7 @@
 		E553C1CE25BF18F200B7A1EE /* TableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553C1CD25BF18F200B7A1EE /* TableView+Extensions.swift */; };
 		E553C1D325BF193C00B7A1EE /* TableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553C1D225BF193C00B7A1EE /* TableViewCell+Extensions.swift */; };
 		E553C1D825BF1B0E00B7A1EE /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553C1D725BF1B0E00B7A1EE /* Color+Extensions.swift */; };
+		E553C1DD25BFE3A600B7A1EE /* GradientCircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553C1DC25BFE3A600B7A1EE /* GradientCircularProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		E553C1CD25BF18F200B7A1EE /* TableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extensions.swift"; sourceTree = "<group>"; };
 		E553C1D225BF193C00B7A1EE /* TableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		E553C1D725BF1B0E00B7A1EE /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		E553C1DC25BFE3A600B7A1EE /* GradientCircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientCircularProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				E514CD5B25BE0B560088B3D1 /* ProductListViewCell.swift */,
+				E553C1DC25BFE3A600B7A1EE /* GradientCircularProgressBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				E514CD5C25BE0B560088B3D1 /* ProductListViewCell.swift in Sources */,
 				E514CD2725BDFBCF0088B3D1 /* ProductsListViewController.swift in Sources */,
 				E553C1CE25BF18F200B7A1EE /* TableView+Extensions.swift in Sources */,
+				E553C1DD25BFE3A600B7A1EE /* GradientCircularProgressBar.swift in Sources */,
 				E553C1D325BF193C00B7A1EE /* TableViewCell+Extensions.swift in Sources */,
 				E553C1D825BF1B0E00B7A1EE /* Color+Extensions.swift in Sources */,
 				E514CD2325BDFBCF0088B3D1 /* AppDelegate.swift in Sources */,

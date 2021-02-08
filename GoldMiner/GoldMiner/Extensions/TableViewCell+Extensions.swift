@@ -7,10 +7,14 @@
 
 import UIKit
 
-extension UITableViewCell {
-    
+protocol ReusableView: class {}
+
+extension ReusableView where Self: UIView {
     static var reuseIdentifier: String {
-        return NSStringFromClass(self)
+        return String(describing: self)
     }
-    
 }
+
+extension UITableViewCell: ReusableView { }
+
+extension UICollectionViewCell: ReusableView { }

@@ -14,16 +14,22 @@ class ProductsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerCell(cellClass: ProductListViewCell.self)
     }
 }
 
 extension ProductsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.dequeue(cellClass: ProductListViewCell.self, forIndexPath: indexPath)
+        let cell: ProductListViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.progressBar.progress = CGFloat(indexPath.row + 1) / 10
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
     }
 }

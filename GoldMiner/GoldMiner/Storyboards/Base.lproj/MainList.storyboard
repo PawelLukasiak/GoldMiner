@@ -16,17 +16,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BCz-iv-uEE">
-                                <rect key="frame" x="10" y="94" width="394" height="758"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BCz-iv-uEE">
+                                <rect key="frame" x="0.0" y="40" width="414" height="831"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductListViewCell" rowHeight="104" id="wY0-z5-Pox" customClass="ProductListViewCell" customModule="GoldMiner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="394" height="104"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ProductListViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProductListViewCell" rowHeight="100" id="wY0-z5-Pox" customClass="ProductListViewCell" customModule="GoldMiner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wY0-z5-Pox" id="8jI-0e-0Cw">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="104"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sD0-QO-15l" customClass="GradientCircularProgressBar" customModule="GoldMiner" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="6" width="88" height="88"/>
+                                                    <color key="backgroundColor" red="0.70027349490930546" green="0.61959302585477172" blue="0.18360520931614877" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="88" id="ZEr-Uv-XgG"/>
+                                                        <constraint firstAttribute="height" constant="88" id="aIn-SQ-kIP"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                            <color key="value" systemColor="systemPurpleColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="gradientColor">
+                                                            <color key="value" systemColor="systemTealColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <constraints>
+                                                <constraint firstItem="sD0-QO-15l" firstAttribute="centerY" secondItem="8jI-0e-0Cw" secondAttribute="centerY" id="AfD-0i-SxI"/>
+                                                <constraint firstItem="sD0-QO-15l" firstAttribute="leading" secondItem="8jI-0e-0Cw" secondAttribute="leading" constant="20" id="jU3-sw-wH2"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="progressBar" destination="sD0-QO-15l" id="KYj-Gv-DQc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -36,12 +66,12 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BCz-iv-uEE" secondAttribute="trailing" constant="10" id="BCR-gP-Qwx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BCz-iv-uEE" secondAttribute="bottom" constant="10" id="GDc-Bd-fG5"/>
-                            <constraint firstItem="BCz-iv-uEE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Iz5-PX-hGc"/>
-                            <constraint firstItem="BCz-iv-uEE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="M5i-nd-iRO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BCz-iv-uEE" secondAttribute="trailing" id="BCR-gP-Qwx"/>
+                            <constraint firstAttribute="bottom" secondItem="BCz-iv-uEE" secondAttribute="bottom" constant="25" id="GDc-Bd-fG5"/>
+                            <constraint firstItem="BCz-iv-uEE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="Iz5-PX-hGc"/>
+                            <constraint firstItem="BCz-iv-uEE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M5i-nd-iRO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -54,8 +84,14 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

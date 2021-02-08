@@ -9,4 +9,5 @@ import UIKit
 
 class ProductListViewCell: UITableViewCell {
     
+    @IBOutlet weak var progressBar: GradientCircularProgressBar!
 }
